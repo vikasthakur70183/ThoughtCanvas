@@ -1,0 +1,65 @@
+
+.BoardsList {
+    margin: 20px;
+}
+
+.Heading {
+    position: relative;
+    left: 20px;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.item {
+    display: flex;
+    border: 2px solid black;
+    max-width: 200px;
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 3px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.Boards {
+    display: flex;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 8px;
+    min-height: 500px;
+    overflow-x: hidden;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.Board {
+    overflow: hidden;
+}
