@@ -1,16 +1,14 @@
-import { useState } from "react";
+import { useContext} from "react";
 import BoardsList from "./BoardsList/BoardsList.jsx"
 import CreateBoard from "./CreateBoard/CreateBoard.jsx"
+import BoardContext from "../../context/boardContext.js";
 
 const Board = () => {
-    const [Boards, setBoards] = useState([]);
-
+    const { Boards, setBoards } = useContext(BoardContext);
     const addBoard = (text) => {
-        console.log(Boards);
-        setBoards([...Boards, { id: Boards.length + 1, text }]);
-        console.log(Boards);
+        setBoards([...Boards, { id: Boards.length + 1, text, posts: [] }]);
+    };
 
-    }
     const deleteBoards = (id) => {
         setBoards(Boards.filter((item) => item.id !== id))
     }

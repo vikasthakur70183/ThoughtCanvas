@@ -1,4 +1,5 @@
 import './App.css'
+import BoardContextProvider from './context/BoardContextProvider';
 import Home from './pages/Home'
 import Posts from './pages/Posts'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -6,12 +7,16 @@ function App() {
 
 
   return (
+
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/Posts' element={<Posts/>}/>
-      </Routes>
+      <BoardContextProvider>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path="/Posts/:id" element={<Posts />} />
+        </Routes>
+      </BoardContextProvider>
     </BrowserRouter>
+
   )
 }
 
